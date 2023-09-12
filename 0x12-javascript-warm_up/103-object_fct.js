@@ -5,7 +5,9 @@ const myObject = {
 };
 console.log(myObject);
 myObject.incr = function () {
-  this.value++;
+  if (typeof this.value === 'number') {
+    this.value++;
+  }
 };
 myObject.incr();
 console.log(myObject);
